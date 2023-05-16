@@ -127,9 +127,67 @@ Contexto: Multiplexação é a transmissão de dois ou mais sinais de informaç�
 * FDM: multiplexação por divisão de frequência. Uma faixa de frequência pra cada canal
 * ![image](https://github.com/ramon-m-machado/Redes/assets/86575893/16bb96ac-c87a-45eb-9477-bf8c253efff1)
 
-* WDM: por comprimento de onda.
-* TDM: por divisão de tempo
-* CDM: por divisão de código
+* WDM: por comprimento de onda. Aplicado a fibras oticas. utiliza diferentes comprimentos de onda.
+![image](https://github.com/ramon-m-machado/Redes/assets/86575893/82f85115-cd78-46cf-81ef-7744e75173b9)
+* TDM: por divisão de tempo. Cada um utiliza toda a largura de banda por um pequeno período.
+![image](https://github.com/ramon-m-machado/Redes/assets/86575893/812e15aa-b0cf-4125-8628-a4f297e0cc8a)
+
+*Não foi pedido*
+* CDM: por divisão de código. Vetores ortogonais (??)
+
+## 18) Cite alguns possíveis serviços que um protocolo de camada de enlace pode
+oferecer à camada de rede?
+* Entrega de quadros. Entregar os quadros aos destinos corretos na rede local.
+* Endereçamento: usa MAC para identificar os dispositivos na rede local.
+* Controle de acesso ao meio: regula o acesso concorrente dos dispositivos ao meio de transmisão compartilhado. Ex CSMA/CD
+* Detecção e correção de erros.
+* Fragmentação e reagrupamento de pacotes
+* Controle de fluxo
+* Priorização de tráfego
+
+
+## 19) Um cabo com 100km de comprimento funciona na taxa de dados T1. A velocidade 
+de propagação no cabo é igual a 2/3 da velocidade da luz no vácuo. Quantos bits 
+o cabo pode conter?
+v_luz =  300.000 km/s
+v_t = 200.000 km/s
+cabo = 100km
+
+frequencia 
+f = 200.000 / 100 = 2.000 Hz
+Por Nyquist
+C = 2*W*log2(L)
+* usando L = 2 (0 ou 1)
+C = 2 * 2.000 * log2(2) = 4.000 bps
+
+## 20) Uma LAN CSMA/CD de 10Mbps (não 802.3) com a extensão de 1 km tem uma 
+velocidade de propagação de 200m/µ. Não são permitidos repetidores nesse 
+sistema. Os quadros de dados têm 256 bits, incluindo 32 bits de cabeçalho, totais 
+de verificação e outras formas de overhead. O primeiro slot de bits depois de uma 
+transmissão bem-sucedida é reservado para o receptor capturar o canal com o 
+objetivo de enviar um quadro de confirmação de 32 bits. Qual será a taxa de 
+dados efetiva, excluindo o overhead, se partirmos do princípio de que não há
+colisões
+
+* LAN CSMA/CD é uma rede de broadcast implementada através de hardware
+* F = 10Mbps
+* tamanho = 1km
+* v = 200m/s
+* quadros: 256 bits, sendo 32 de cabeçalho, então são 224 de informação
+* quadro de confirmação 32 bits
+
+Por Nyquist
+C = 2*W*log2(L)
+C = 2 * 10.000 * log2(256) = 160.000 bps
+
+porém, como a cada transmissão bem sucedida ele envia um quadro de verificação, a frequência deve cair pela metade, sendo 80.000 bps
+
+## 21) Um pacote IP a ser transmitido por uma rede Ethernet tem 60 bytes de 
+comprimento, incluindo todos os seus cabeçalhos. Se o LLC não estiver em uso, 
+será necessário utilizar preenchimento no quadro Ethernet? Em caso afirmativo, 
+de quantos bytes?
+
+
 
 
 ## dicionario
