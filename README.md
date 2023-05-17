@@ -1,3 +1,7 @@
+## Link do gitHub (para ver as imagens)
+https://github.com/ramon-m-machado/Redes
+
+
 # LISTA DE REDES
 
 ### 1) o que é atenuação
